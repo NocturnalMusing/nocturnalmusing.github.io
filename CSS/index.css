@@ -1,0 +1,22 @@
+#asa-1 {
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    border-radius: 5%;
+}
+
+.contentBox {
+    height: 500px;
+    max-width: 750px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.links {
+    list-style-type: none;
+    /* ^ This removes the bullets in front of <ul> entries! */
+    display: flex;
+    justify-content: space-around;
+}
