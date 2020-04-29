@@ -1,31 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,400;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b1e6ff636b.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="CSS/index.css">
     <title>Calliope J. C.</title>
 </head>
+
 <body>
-    <!-- These two <div> will turn into Asa's ears, which will be animated via JS to "flick" or "sway" back and forth. Don't forget you'll need to do a drawing of Asa herself using the Binary brush in SAI. -->
-    <div id="asa-1"></div>
-    <div id="asa-2"></div>
-    <!-- If you have time and can figure out a functional way to do it, try to implement the "glitch" speech bubble behind the content box. If not doable, give the contentBox a tail and a glitch effect at the borders. -->
-    <div class="contentBox">
-        <h1>Calliope Jimenez-Clark</h1>
-        <p>
-            Summary Blurb About Me Thingy Here Listen Talking About Myself Is Hard
-            Aspiring FEWD? Training FEWD? What's a good pitch
-            Also introduce Asa and explain my enjoyment of branding and creating mascots here
-            Vague desire to try Graphic Design mention maybe? 
-        </p>
-        <!-- Move links to onClick redirect functions in JS, leave buttons as is- Style with Bootstrap -->
-        <ul class="links">
-            <li><button><a href="folio.html">Portfolio</a></button></li> 
-            <li><button><a href="contact.html">Contact</a></button></li>
-            <li><button><a href="asa.html">About the Cat</a></button></li>
-        </ul>
+    <div class="pageLayout">
+        <!-- These two <div> will turn into Asa's ears, which will be animated via JS to "flick" or "sway" back and forth. Don't forget you'll need to do a drawing of Asa herself using the Binary brush in SAI. -->
+        <div class="asaBlackie">
+            <div class="asaEars">
+                <div id="asa-1"></div>
+                <div id="asa-2"></div>
+            </div>
+            <div class="asaHerself">
+                <img src="Images/Asa 1.png" id="blackie"></img>
+            </div>
+        </div>
+        <!-- If you have time and can figure out a functional way to do it, try to implement the "glitch" speech bubble behind the content box. If not doable, give the contentBox a tail and a glitch effect at the borders. -->
+        <div class="contentBox">
+            <div class="homePage">
+                <h1>Calliope Jimenez-Clark</h1>
+                <hr>
+                </hr> <!-- I'm the Horizontal Rule, I'm a line divider.-->
+                <p class="aboutMe">
+                    More than anything, I love to create. Front-End Web Development gives me the opportunity to use that
+                    creativity constructively, and with a budding interest in Graphic Design, I'm eager for the chance
+                    to meld my
+                    artistic and technological sides. If you've got a project, I'd love to lend my imagination to it.
+                </p>
+                <!-- Move links to onClick redirect functions in JS, leave buttons as is- Style with Bootstrap -->
+                <ul class="links">
+                    <li><button type="button" class="btn btn-outline-dark btn-sm" id="portFolio">portfolio</button></li>
+                    <li><button type="button" class="btn btn-outline-dark btn-sm" id="contactMe">contact</button></li>
+                    <li><button type="button" class="btn btn-outline-dark btn-sm" id="aboutTheCat">about the
+                            <s>cat</s></button></li>
+                </ul>
+            </div>
+
+            <div class="folioPage">
+                <!-- Center me, give me a bottom border with a margin on top so I look like a floaty line -->
+                <i class="fas fa-times" id="closeButton"></i>
+                <h1>Portfolio</h1>
+                <hr>
+                </hr>
+                <!--  -->
+                <h2>Display to be added.</h2>
+                <!-- 2 - 3 image divs per row caption directly under, centered maybe? onHover low opacity title click to be redirected to the page / static example -->
+            </div>
+
+            <div class="contactPage">
+                <i class="fas fa-times" id="closeButton2"></i>
+                <div>
+                    <h1>Make Contact</h1>
+                    <hr>
+                    </hr>
+                    <h2>Reach out any time!</h2>
+                </div>
+                <div class="contactInfo">
+                    <p class="workEmail">c.jimenezclark@gmail.com</p>
+
+                    <a href="https://www.denofgeek.com/wp-content/uploads/2019/09/spider-man-far-from-home-mysterio-featurette.jpg?fit=1200%2C632"
+                        target="_blank"><i class="fab fa-facebook-square fa-2x" id="icon"></i></a>
+                    <a href="https://github.com/NocturnalMusing" target="_blank"> <i class="fab fa-github fa-2x"
+                            id="icon"></i></a>
+                    <a href="https://www.denofgeek.com/wp-content/uploads/2019/09/spider-man-far-from-home-mysterio-featurette.jpg?fit=1200%2C632"
+                        target="_blank"><i class="fab fa-linkedin fa-2x" id="icon"></i></a>
+                </div>
+            </div>
+
+            <div class="aboutAsa">
+                <i class="fas fa-times" id="closeButton3"></i>
+                <div>
+                    <h1>About the Cat</h1>
+                    <hr>
+                    </hr>
+                    <h2>( So, uh, who's the cat... TV? )</h2>
+                </div>
+
+                <div>
+                    <p class="theCatTv">Meet <i>Asa</i>; a professional avatar and mascot for my work.</p>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="JS/script.js"></script>
 </body>
+
 </html>
